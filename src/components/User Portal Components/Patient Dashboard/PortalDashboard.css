@@ -31,7 +31,7 @@
     margin-top: 1%; /* Keep percentage for top margin */
     border-radius: 0.9375rem; /* Using rem for border radius */
     padding: 0.9375rem; /* Using rem for padding */
-    width: 97%; /* Keep percentage for width */
+    width: 100%; /* Keep percentage for width */
     /* Remove fixed height to allow content to dictate height */
   }
 
