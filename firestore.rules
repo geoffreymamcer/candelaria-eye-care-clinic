@@ -1,0 +1,38 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Allow writing patient records (as before)
+    match /patientRecords/{document=**} {
+      allow read, write: if true;
+    }
+
+    // 🔐 Allow users to create/read their own user profile
+    match /users/{userId} {
+      allow write, read: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // 📅 Rules for the appointments collection
+    match /appointments/{appointmentId} {
+      // Allow read access to all (you might want to restrict this later)
+      allow read: if true;
+
+      // Allow authenticated users to create a new appointment
+      allow create: if request.auth != null
+                   && request.resource.data.userId == request.auth.uid;
+
+      // Allow authenticated users to update their own appointment
+      allow update: if request.auth != null
+                   && resource.data.userId == request.auth.uid
+                   && request.resource.data.userId == request.auth.uid;
+
+      // Prevent deletion (you can adjust this based on your needs)
+      allow delete: if false;
+    }
+
+    // Optional: block everything else (this should be last)
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

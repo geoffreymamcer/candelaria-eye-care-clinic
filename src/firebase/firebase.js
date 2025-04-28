@@ -13,6 +13,8 @@ const firebaseConfig = {
   measurementId: import.meta.env.VITE_MEASUREMENT_ID, // Access from env
 };
 
+console.log("VITE_API_KEY:", import.meta.env.VITE_API_KEY);
+
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app); // Pass app instance
 const db = getFirestore(app); // Pass app instance
