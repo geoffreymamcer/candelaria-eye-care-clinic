@@ -1,0 +1,469 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: transparent;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+}
+
+input,
+button,
+textarea {
+  border: none;
+  background: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.patientRecordCard {
+  border: 2px solid #8c0a14;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* evenly distributes elements */
+  align-items: center;
+  text-align: center;
+
+  width: 220px;
+  height: 280px;
+  border-radius: 15px;
+  padding: 20px 10px; /* add padding for better spacing */
+  box-sizing: border-box;
+}
+
+.patientProfilePicture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.patientName {
+  min-height: 48px;
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  color: #8c0a14;
+}
+
+.viewDetailsButton {
+  background-color: #8c0a14;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  width: 130px;
+  height: 50px;
+  border-radius: 15px;
+}
+
+.viewDetailsButton:hover {
+  background-color: #8f2a32;
+  cursor: pointer;
+}
+
+.adminLogInDiv {
+  background-color: #8c0a14;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.logInContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 1212px;
+  height: 606px;
+  border-radius: 16.5px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.logoImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px 0px 0px 15px;
+}
+
+.logo {
+  height: 100%;
+  width: 100%;
+}
+
+.child {
+  flex: 1;
+}
+
+.adminLoginUserLogo {
+  height: 150px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  row-gap: 20px;
+}
+
+.adminInput {
+  width: 350px;
+  height: 50px;
+  border-radius: 15px;
+  border: solid 2px #8c0a14;
+  font-size: 18px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  outline: none;
+}
+
+.adminInput:focus {
+  border: solid 2px #8c0a14;
+}
+
+.loginButton {
+  background-color: #8c0a14;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.loginButton:hover {
+  background-color: #8f2a32;
+  cursor: pointer;
+}
+
+.username,
+.password {
+  padding: 10px;
+}
+
+.loginText {
+  font-size: 25px;
+  color: #8c0a14;
+}
+
+.adminDashboardContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashBoardHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 25px;
+  position: relative;
+  z-index: 1000;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+
+.icon {
+  width: 35px;
+}
+
+.CECClogo {
+  width: 125px;
+}
+
+.dateTimeContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 25%;
+  color: #8c0a14;
+  font-weight: bold;
+}
+
+.dateContainer,
+.timeContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+
+.searchBarInput {
+  border: solid #8c0a14 2px;
+  border-radius: 25px;
+  padding-left: 10px;
+  font-size: 18px;
+  width: 325px;
+  height: 45px;
+  outline: none;
+}
+
+.profile-notification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  gap: 30px;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-item {
+  list-style-type: none;
+  width: 160px;
+  height: 60px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  color: #8c0a14;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.menu-item.active {
+  background-color: #8c0a14;
+  color: white;
+}
+
+.menu-item:hover {
+  background-color: #8c0a14;
+  color: white;
+  cursor: pointer;
+}
+
+.mainDashboard {
+  display: flex;
+  flex-direction: row;
+}
+
+.dashboardSideBar {
+  width: 27%;
+  margin-top: 20px;
+}
+
+.dashboardMainContent {
+  width: 73%;
+  margin-top: 20px;
+}
+
+.sidebar-menu {
+  gap: 60px;
+}
+
+.logoutButton {
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: none;
+  background-color: #8c0a14;
+  color: white;
+  font-weight: bold;
+}
+.logoutButton:hover {
+  cursor: pointer;
+  background-color: #8f2a32;
+}
+
+.floating-button {
+  position: fixed;
+  bottom: 100px;
+  right: 200px;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: #8c0a14;
+  color: white;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.floating-button:hover {
+  background-color: #8f2a32;
+}
+
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.popup-overlay.open {
+  visibility: visible;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Popup Content */
+.popup-content {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  width: 1000px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+  opacity: 0;
+  max-height: 80vh; /* Adjust this value as needed (e.g., 70vh, 90vh) */
+  overflow-y: auto;
+}
+
+.popup-overlay.open .popup-content {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.15s;
+}
+
+/* Form Styles */
+.popup-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.button-group button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.button-group button:first-child {
+  background: #8c0a14;
+  color: white;
+  border: none;
+}
+
+.button-group button:first-child:hover {
+  background: #8f2a32;
+}
+
+.button-group button:last-child {
+  background: #f0f0f0;
+  border: none;
+}
+
+.button-group button:last-child:hover {
+  background: #ddd;
+}
+
+.patientList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 25px;
+}
+
+.patient-info-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.patient-information-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 1000px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  text-align: left;
+}
+
+.patient-information-close-button {
+  background-color: #8c0a14;
+  color: white;
+  height: 35px;
+  width: 100px;
+  font-size: 18px;
+  border-radius: 5px;
+  display: block;
+  margin: 20px auto 0;
+}
+
+.patient-information-close-button:hover {
+  background-color: #8f2a32;
+  cursor: pointer;
+}
+
+/* Patient details styles */
+.patient-details {
+  padding: 20px;
+}
+
+.detail-row {
+  margin-bottom: 10px;
+}
+
+.detail-label {
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 19px;
+}
+
+.informationCategory {
+  text-align: center;
+}
+
+.inputField {
+  font-size: 18px;
+  color: black;
+}
+
+.detailsLabel {
+  font-size: 20px;
+}

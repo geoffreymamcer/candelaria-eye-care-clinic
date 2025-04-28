@@ -1,0 +1,245 @@
+@media only screen and (max-width: 768px) {
+  .PortalBanner {
+    background-image: url("/portalBannerBackgroud.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    min-height: 20vh;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  .lastLogin {
+    text-align: right;
+    font-size: 13px;
+    color: rgb(207, 210, 212);
+  }
+
+  .AppointmentContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #8c0a14;
+    border: 2px solid #8c0a14;
+    border-left: 10px solid #8c0a14;
+    margin-top: 1%;
+    border-radius: 15px;
+    height: 100%;
+    padding: 0px 10px;
+    width: 97%;
+  }
+
+  .appointmentBanner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 35vh;
+  }
+
+  .appointmentText {
+    font-size: 20px;
+  }
+
+  .container1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .appointmentStatus {
+    font-weight: bold;
+    background-color: rgb(216, 216, 13);
+    padding: 7px;
+    border-radius: 10px;
+    font-size: 15px;
+  }
+
+  .container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 15px;
+    height: 60%;
+  }
+
+  .doctorName {
+    font-size: 16px;
+  }
+  .residency {
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+  }
+  .doctorInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .imagePlaceholder {
+    width: 50px;
+    border-radius: 100%;
+    margin-right: 5px;
+  }
+
+  .appointmentDate {
+    font-size: 21px;
+    font-weight: bold;
+  }
+
+  .buildingName {
+    font-size: 18px;
+  }
+
+  .roomNumber {
+    display: block;
+  }
+
+  .container3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .rescheduleButton {
+    width: 48%;
+    border: 2px solid #8c0a14;
+    border-radius: 10px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #8c0a14;
+  }
+
+  .appointmentDetailsButton {
+    width: 48%;
+    border-radius: 10px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #8c0a14;
+  }
+
+  .featuresContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+    width: 100%;
+    max-height: calc(
+      100vh - 80px
+    ); /* Adjust 80px to your navbar height + any header */
+    overflow-y: auto;
+    padding-bottom: 80px; /* Same as navbar height for safe space */
+  }
+
+  .featureCard {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    justify-content: center;
+    width: 95%;
+    border: 2px solid rgb(206, 206, 203);
+    gap: 15px; /* Add this for spacing between children */
+  }
+
+  .emoji_container {
+    margin-right: 15px;
+    font-size: 1.5em;
+    background-color: #8c0a14;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 1;
+    box-sizing: border-box;
+  }
+
+  .featureTextContainer {
+    flex-grow: 1; /* Allow the text to take up available space */
+  }
+
+  .featureName {
+    color: #8c0a14; /* Match the title color */
+    margin-bottom: 5px;
+    font-size: 1.1em;
+  }
+
+  .feautureDescription {
+    color: #555;
+    font-size: 0.9em;
+    margin-bottom: 0;
+  }
+
+  .arrowContainer {
+    margin-left: 15px; /* Space between the text and the arrow */
+    font-size: 1.5em; /* Adjust the size of the arrow */
+    color: #555; /* Adjust the arrow color */
+  }
+
+  .portalNavBar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0; /* Use one background color */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid #e0e0e0;
+    z-index: 100;
+  }
+
+  .portalNavBar p {
+    display: flex; /* Arrange icon and text horizontally in each item */
+    flex-direction: column; /* Stack icon and text vertically on smaller screens if needed */
+    align-items: center; /* Center icon and text horizontally */
+    justify-content: center; /* Center icon and text vertically */
+    margin: 0; /* Remove default paragraph margins */
+    color: #555; /* Default text color */
+    font-size: 0.8em; /* Adjust font size */
+    text-align: center; /* Center the text */
+  }
+
+  .portalNavBar p span {
+    font-size: 1.5em; /* Adjust icon size */
+    margin-bottom: 5px; /* Space between icon and text */
+    display: block; /* Ensure it takes full width of the paragraph for centering */
+  }
+
+  .nav {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px; /* Optional: for rounded corners */
+  }
+
+  .nav.active {
+    background-color: #8c0a14;
+    color: white;
+  }
+
+  .nav span {
+    margin-right: 5px; /* Space between icon and text */
+  }
+}
