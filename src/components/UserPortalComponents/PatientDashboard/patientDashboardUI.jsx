@@ -7,7 +7,7 @@ import AppointmentInterface from "../Appointment Interface/AppointmentInterface"
 
 function DashboardUI() {
   const [firstName, setFirstName] = useState("");
-  const [activeNav, setActiveNav] = useState("home");
+  const [activeNav, setActiveNav] = useState("home"); // Initialize to "home"
 
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
@@ -21,9 +21,10 @@ function DashboardUI() {
     <div className="portalDashboard">
       {activeNav === "home" && (
         <>
-          <PatientBanner name={firstName} />
+          <PatientBanner firstName={firstName} />
           <PatientSchedule />
           <PortalFeatures />
+          {/* You might want to add more components here for your home view */}
         </>
       )}
 

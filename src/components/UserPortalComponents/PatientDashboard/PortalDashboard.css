@@ -161,6 +161,13 @@
     width: 95%;
     border: 2px solid rgb(206, 206, 203);
     gap: 15px; /* Add this for spacing between children */
+    transition: transform 0.2s ease-in-out; /* Smooth transition for the transform property */
+  }
+
+  .featureCard:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   }
 
   .emoji_container {

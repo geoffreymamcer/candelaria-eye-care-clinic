@@ -1,7 +1,11 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 import FeaturesCard from "./FeatureCard";
+import { useNavigate } from "react-router-dom";
 
-function PortalFeatures() {
+function PortalFeatures({}) {
+  const navigate = useNavigate();
+  // Receive the onColorVisionClick prop
   return (
     <div className="featuresContainer">
       <FeaturesCard
@@ -20,7 +24,12 @@ function PortalFeatures() {
         icon="👁️"
         feature="Color Vision Test"
         description="Perform a preliminary color vision test by yourself"
+        onClick={() => navigate("color-vision-test")}
       />
+
+      <main>
+        <Outlet />
+      </main>
     </div>
   );
 }

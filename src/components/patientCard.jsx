@@ -18,7 +18,10 @@ function Card(props) {
       const docSnap = await getDoc(patientDocRef);
 
       if (docSnap.exists()) {
-        setPatientDetails(docSnap.data());
+        setPatientDetails({
+          ...docSnap.data(),
+          patientId: props.patientId, // Add the patient ID to the details
+        });
       } else {
         console.log("No such document!");
         setPatientDetails(null);
